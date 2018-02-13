@@ -1,0 +1,43 @@
+x = int(input('Enter your number.\n'))
+y = ""
+while (x>=1000):
+    y += "M"
+    x -= 1000
+while (x>=900):
+    y += "CM"
+    x -= 900
+while (x>=500):
+    y += "D"
+    x -= 500
+while (x>=400):
+    y += "CD"
+    x -=400
+while (x>=100):
+    y += "C"
+    x -= 100
+while (x>=90):
+    y += "XC"
+    x -=90
+while (x>=50):
+    y += "L"
+    x -=50
+while (x>=40):
+    y += "XL"
+    x -=40
+while (x>=10):
+    y += "X"
+    x -=10
+while (x>=9):
+    y += "IX"
+    x -=9
+while (x>5):
+    y += "V"
+    x -=5
+while (x>=4):
+    y += "IV"
+    x -=4
+while (x>=1):
+    y += "I"
+    x -=1
+
+print(y)
