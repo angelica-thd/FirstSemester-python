@@ -4,10 +4,10 @@ import unicodedata
 import collections
 
 def twitter_connection():
-    consumer_key = 'NajUq95poVcCoDp4TJtgj0lVd'
-    consumer_secret = 'dZUbYGHvtJ3r2m8JRqh7YmTOvzJcodjtzWYPSmI7Tt00O3Skg8'
-    access_token = '964180915202199552-Wk5VNneAAWRVMpJkyYM5qUX1Ljo6Afv'
-    access_secret = 'Qp2Ina1kyVyHwDAJwNvW7T3YYsuzvQToCBnCMZNfOy9AH'
+    consumer_key = ''
+    consumer_secret = ''
+    access_token = ''
+    access_secret = ''
     auth = OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_secret)
     api = tweepy.API(auth)
