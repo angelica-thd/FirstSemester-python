@@ -17,19 +17,11 @@ username= input('Username/Screen Name:\n')
 api=twitter_connection()
 tweets= api.user_timeline(id=username, count=10)
 L=[]
-p = list([',' ,'|' , '.' , ':' , '!' ,' ' ,'#' ,'@' ,'$' ,'%' ,'*' , '"' , '?' , '(' , ')' , "'"])
-
 print('Your ten latest tweets are:\n')
 for tweet in tweets:
-    L.append(tweet.text)
-    if p in L:
-        L.remove(p)
-    print(tweet.text)
-
-
-for tweet.text in L:
-    for word in tweet.text.split(' '):
-        counter=collections.Counter(tweet.text)
+    L.append((tweet.text).split(' '))
+    for word in L:
+        counter= collections.Counter(word)
         popword=str(counter.most_common(1))
-
-print("Your most popular word is " + popword )
+    print(tweet.text)
+print('Your most popular word is ' + popword )
