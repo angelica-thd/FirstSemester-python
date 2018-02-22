@@ -1,6 +1,6 @@
 import sys
 
-b= open(sys.argv[1], 'r')
+b= open(sys.argv[0], 'r')
 brn=b.read()
 b.close()
 
@@ -19,6 +19,7 @@ while brn_ps<len(brn):
         if m[m_ps]<=-1:
             m[m_ps]=255
     elif brn[brn_ps]=="[":
+        #counting if the number of the opening brckts matches the closing brckts
         if m[m_ps]==0:
              openbrckt=0
              brn_ps+=1
@@ -45,10 +46,12 @@ while brn_ps<len(brn):
     elif brn[brn_ps]==">":
         m_ps +=1
         if len(m)<=m_ps:
+            #if there's no other cell,create another empty one
             m.append(0)
     elif brn[brn_ps]=="<":
         m_ps -=1
         if m_ps<0:
+            #brainfuck doesn't go backwards
             print("Error! Brainfuck doesn't understand this...")
             sys.exit(0)
     elif brn[brn_ps]==",":
